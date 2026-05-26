@@ -25,9 +25,22 @@
                 <h3>Ajouter une chambre</h3>
 
                 <form method="POST">
-                    <input type="text" name="numero" placeholder="Numéro de chambre" required><br><br>
-                    <input type="text" name="type" placeholder="Type (simple, double...)" required><br><br>
-                    <button type="submit">Ajouter</button>
+                    <select name="type_ch" required>
+        <option value="">-- Type de chambre --</option>
+        <option value="Simple">Simple</option>
+        <option value="Double">Double</option>
+        <option value="Suite">Suite</option>
+    </select><br><br>
+    <input type="number" name="prix_ch" placeholder="Prix par nuit (FCFA)" required><br><br>
+    <select name="num_hot" required>
+        <option value="">-- Sélectionner un hôtel --</option>
+        <?php while ($hotel = mysqli_fetch_assoc($hotels)) : ?>
+            <option value="<?php echo $hotel['num_hot']; ?>">
+                <?php echo $hotel['nom_hot']; ?>
+            </option>
+        <?php endwhile; ?>
+    </select><br><br>
+    <button type="submit" name="ajouter">Ajouter</button>
                 </form>
             </div>
 

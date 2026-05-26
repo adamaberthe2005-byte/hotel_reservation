@@ -24,9 +24,12 @@
                 <h3>Ajouter un client</h3>
 
                 <form method="POST">
-                    <input type="text" name="nom" placeholder="Nom" required><br><br>
-                    <input type="text" name="telephone" placeholder="Téléphone" required><br><br>
-                    <button type="submit">Ajouter</button>
+                     <input type="text" name="nom_cli" placeholder="Nom" required><br><br>
+    <input type="text" name="prenom_cli" placeholder="Prénom" required><br><br>
+    <input type="text" name="tel_cli" placeholder="Téléphone" required><br><br>
+    <input type="email" name="email_cli" placeholder="Email" required><br><br>
+    <input type="password" name="mdp_cli" placeholder="Mot de passe" required><br><br>
+    <button type="submit" name="ajouter">Ajouter</button>
                 </form>
             </div>
 
