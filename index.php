@@ -41,3 +41,32 @@
 </body>
 
 </html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion Hôtel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+<?php include "sidebar.php"; ?>
+    
+    <!-- CONTENU PRINCIPAL -->
+    <main class="main">
+        <header class="header">
+            <h1>Tableau de bord</h1>
+        </header>
+
+        <section class="content">
+            <div class="card">Clients</div>
+            <div class="card">Chambres</div>
+            <div class="card">Réservations</div>
+        </section>
+    </main>
+
+</div>
+
+</body>
+</html>
