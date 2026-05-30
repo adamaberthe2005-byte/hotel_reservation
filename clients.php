@@ -49,7 +49,7 @@ $result = mysqli_query($conn, "SELECT * FROM CLIENT");
         <section class="content">
 
             <!-- FORMULAIRE -->
-            <div class="card">
+            <div class="card" id="ajouter-client">
                 <h3>Ajouter un client</h3>
                 <form method="POST">
                     <input type="text" name="nom_cli" placeholder="Nom" required><br><br>

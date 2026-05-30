@@ -20,7 +20,7 @@
         <section class="hero">
             <h2>Bienvenue dans notre application de gestion hôtelière</h2>
             <p>Gérez les clients, chambres et réservations facilement.</p>
-            <a href="pages/login.php"><button>Commencer</button></a>
+            <a href="clients.php#ajouter-client"><button>Commencer</button></a>
         </section>
 
         <section class="content">
