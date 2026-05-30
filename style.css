@@ -5,12 +5,17 @@
 }
 
 body{
-    font-family: Arial;
-    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    color: #fff;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url('images/background.jpeg') center/cover no-repeat fixed;
+    background-attachment: fixed;
 }
 
 header{
-    background-color: darkblue;
+    background: rgba(0, 0, 70, 0.85);
     color: white;
     padding: 20px;
 
@@ -93,7 +98,7 @@ button:hover{
 /* CONTENU */
 .main {
     flex: 1;
-    background: #f4f4f4;
+    background: transparent;
     display: flex;
     flex-direction: column;
 }
@@ -111,7 +116,8 @@ button:hover{
 }
 
 .card {
-    background: white;
+    background: rgba(255, 255, 255, 0.95);
+    color: #222;
     padding: 20px;
     flex: 1;
     border-radius: 10px;

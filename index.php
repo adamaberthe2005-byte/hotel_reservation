@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>🏨 Gestion Hôtel</h1>
+        <h1> Gestion Hôtel</h1>
         <nav>
             <a href="index.php">Accueil</a>
             <a href="pages/login.php">Connexion</a>
