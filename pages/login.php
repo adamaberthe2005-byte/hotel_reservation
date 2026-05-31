@@ -15,7 +15,7 @@ if (isset($_POST['se_connecter'])) {
         $_SESSION['client']    = $client;
         $_SESSION['num_cli']   = $client['num_cli'];
         $_SESSION['nom_cli']   = $client['nom_cli'];
-        header("Location: ../index.php");
+        header("Location: ../reservation.php");
         exit();
     } else {
         $erreur = "Email ou mot de passe incorrect !";

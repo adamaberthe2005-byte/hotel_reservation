@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'config/connexion.php';
 
 // ===== AJOUTER UNE RESERVATION =====
@@ -41,7 +42,13 @@ $chambres = mysqli_query($conn, "SELECT C.*, H.nom_hot
                                   FROM CHAMBRE C 
                                   JOIN HOTEL H ON C.num_hot = H.num_hot");
 
-// ===== RÉCUPÉRER TOUTES LES RESERVATIONS =====
+// ===== RÉCUPÉRER LES RÉSERVATIONS =====
+$clientFilter = '';
+if (isset($_SESSION['num_cli'])) {
+    $clientId = intval($_SESSION['num_cli']);
+    $clientFilter = "WHERE R.num_cli = $clientId";
+}
+
 $result = mysqli_query($conn, "SELECT R.num_res, R.date_deb, R.date_fin,
                                        C.nom_cli, C.prenom_cli,
                                        CH.type_ch, H.nom_hot
@@ -49,7 +56,8 @@ $result = mysqli_query($conn, "SELECT R.num_res, R.date_deb, R.date_fin,
                                 JOIN CLIENT C ON R.num_cli = C.num_cli
                                 JOIN LIGNE_RESERVATION LR ON R.num_res = LR.num_res
                                 JOIN CHAMBRE CH ON LR.num_ch = CH.num_ch
-                                JOIN HOTEL H ON CH.num_hot = H.num_hot");
+                                JOIN HOTEL H ON CH.num_hot = H.num_hot
+                                $clientFilter");
 ?>
 
 <!DOCTYPE html>
